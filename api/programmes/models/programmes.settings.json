@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "programmes",
+  "info": {
+    "name": "Programmes-papier",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Titre": {
+      "type": "string"
+    },
+    "ProgrammeATelecharger": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
